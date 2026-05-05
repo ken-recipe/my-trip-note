@@ -7,7 +7,7 @@ featured: true
 draft: false
 ---
 
-![バックパックを背負って旅する](/images/backpacker-forest.jpg)
+![バックパックを背負って旅する](/images/backpacker-street.jpg)
 
 29歳のあの頃、計画を進めていた。
 正直に言おう。**海外への経験値が、ゼロだった。**
