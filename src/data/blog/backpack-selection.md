@@ -1,7 +1,7 @@
 ---
 title: "バックパック選び、非常に悩みました。"
 description: "情報過多で選べない！カリマー・ミレー・モンベルの3つに絞って実際に店舗で試した比較レポート。"
-pubDatetime: 2025-05-04T10:00:00Z
+pubDatetime: 2025-05-04T00:00:00Z
 tags: ["準備", "一人旅", "バックパック", "ギア"]
 featured: false
 draft: false
