@@ -166,6 +166,14 @@ const structuredData = {
         };
       })();
     </script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGTF81G7KM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MGTF81G7KM');
+    </script>
   </head>
   <body>
     <slot />
