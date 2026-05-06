@@ -50,7 +50,9 @@ draft: false
 > 💡 **2026年版アドバイス：** ワイヤー錠はゲストハウスのロッカーで今も活躍する定番アイテム。TSAロック対応のものを選ぶとさらに安心だ。
 
 ### 電気・通信
-- **電源変換プラグ**（万能型）→ 国によってコンセント形状が違うので必須。1つで世界対応のタイプが便利
+- **電源変換プラグ**（万能型）→ 国によってコンセント形状が違うので必須。1つで世界対応のタイプが便利。実際に旅で使ったのがこれで、9種類のプラグ形状に対応していて非常に重宝した。
+
+<table border="0" cellpadding="0" cellspacing="0"><tr><td><div style="background-color:#FFFFF1;width:138px;margin:0px;padding:5px 0;text-align:center;overflow:hidden;"><a href="https://hb.afl.rakuten.co.jp/ichiba/537dd698.5523f7b3.537dd699.a586f69c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fssk-1%2Fasnv-90470-8-%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjowLCJjb2wiOjEsImJidG4iOjAsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;color:#3C80B7;"><img src="https://hbb.afl.rakuten.co.jp/hgb/537dd698.5523f7b3.537dd699.a586f69c/?me_id=1279430&item_id=18596958&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fssk-1%2Fcabinet%2Fasnv20210421l%2F4969887838334-500.jpg%3F_ex%3D128x128&s=128x128&t=picttext" border="0" style="margin:2px" alt="" title=""></a><p style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word"><a href="https://hb.afl.rakuten.co.jp/ichiba/537dd698.5523f7b3.537dd699.a586f69c/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fssk-1%2Fasnv-90470-8-%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoiZG93biIsImNvbSI6MSwiY29tcCI6ImRvd24iLCJwcmljZSI6MCwiYm9yIjowLCJjb2wiOjEsImJidG4iOjAsInByb2QiOjAsImFtcCI6ZmFsc2V9" target="_blank" rel="nofollow sponsored noopener" style="word-wrap:break-word;color:#3C80B7;">1台でほぼ全世界9種類のプラグ形状に変換できるマルチ海外電源変換アダプタ 分割、...</a></p></div><br><p style="color:#000000;font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word"></p></td></tr></table>
 - **スマートフォン**→ 地図・翻訳・連絡・写真と、旅の生命線
 - **モバイルバッテリー**→ 移動中の充電切れを救ってくれた相棒
 - **ノートPC・充電器**→ 重いが、ブログ更新や情報収集には必要だった
