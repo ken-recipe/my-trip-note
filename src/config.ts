@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://my-trip-note.pages.dev/", // replace this with your deployed domain
+  website: "https://my-trip-note.com/",
   author: "Kensuke",
-  profile: "https://my-trip-note.pages.dev/about/",
+  profile: "https://my-trip-note.com/about/",
   desc: "旅・挑戦・日々の記録",
   title: "my trip note",
   ogImage: "astropaper-og.jpg",
