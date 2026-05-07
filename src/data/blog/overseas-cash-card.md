@@ -7,7 +7,7 @@ featured: false
 draft: false
 ---
 
-![海外旅行前のお金の準備](/images/backpacker-road.jpg)
+![海外旅行用の財布と外国紙幣](/images/travel-cash-wallet.jpg)
 
 旅立ちの前、やることリストはたくさんある。その中でも見落としがちなのが「海外でのお金の準備」だ。
 
