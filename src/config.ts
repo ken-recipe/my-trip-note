@@ -1,5 +1,7 @@
 export const SITE = {
   website: "https://my-trip-note.com/",
+  /** Google Analytics 4 の測定ID（未使用時は空文字にする） */
+  googleAnalyticsMeasurementId: "G-JDX3Z4FR0L",
   author: "Kensuke",
   profile: "https://my-trip-note.com/about/",
   desc: "旅・挑戦・日々の記録",

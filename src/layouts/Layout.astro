@@ -135,6 +135,42 @@ const structuredData = {
       )
     }
 
+    {
+      SITE.googleAnalyticsMeasurementId && (
+        <>
+          <script
+            is:inline
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${SITE.googleAnalyticsMeasurementId}`}
+          />
+          <script
+            is:inline
+            define:vars={{ gaId: SITE.googleAnalyticsMeasurementId }}
+          >
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+            gtag("js", new Date());
+            // View Transitions 対応: 通常の自動 page_view はオフにし、ページ確定後に明示送信する。
+            gtag("config", gaId, { send_page_view: false });
+
+            document.addEventListener("astro:page-load", () => {
+              queueMicrotask(() => {
+                gtag("event", "page_view", {
+                  page_location: window.location.href,
+                  page_path:
+                    window.location.pathname + window.location.search,
+                  page_title: document.title,
+                });
+              });
+            });
+          </script>
+        </>
+      )
+    }
+
     <ClientRouter />
 
     <!-- Minimal inline script to prevent FOUC - sets theme immediately -->
