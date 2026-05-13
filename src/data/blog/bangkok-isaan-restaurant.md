@@ -7,8 +7,6 @@ featured: false
 draft: false
 ---
 
-![バンコクのBlack Canyon Coffee。ヤシの木のテラス席があるおしゃれなカフェだった](/images/bangkok-black-canyon-coffee.jpg)
-
 今日はリアルタイムで書く！
 
 とりあえず10キロぐらいであれば、歩きで移動していた。
@@ -24,6 +22,8 @@ draft: false
 ## Black Canyon Coffee からの作戦タイム
 
 ちなみに今いるカフェがこちら。
+
+![バンコクのBlack Canyon Coffee。ヤシの木のテラス席があるおしゃれなカフェだった](/images/bangkok-black-canyon-coffee.jpg)
 
 「ブラックキャニオンコーヒー」——タイのオーソドックスなカフェらしいけど、タイで１位、２位を争うぐらい（僕判断）のすごくおしゃれな場所を見つけた。ヤシの木生い茂るテラス席が存在するみたいな感じで。お店はこちら → [Black Canyon Coffee（TripAdvisor）](https://www.tripadvisor.jp/ShowUserReviews-g293916-d1603578-r157469575-Black_Canyon_Coffee_MBK_Center-Bangkok.html)
 
