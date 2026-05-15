@@ -1,0 +1,98 @@
+---
+const slides = [
+  {
+    src: "/images/backpacker-mountain.jpg",
+    alt: "バックパックを背負って山を眺める旅人",
+  },
+  {
+    src: "/images/backpacker-street.jpg",
+    alt: "カラフルな海外の街を歩くバックパッカー",
+  },
+  {
+    src: "/images/khaosan-road-night.jpg",
+    alt: "バンコク・カオサンロードの夜の賑わい",
+  },
+  {
+    src: "/images/bangkok-soi-cowboy-night.jpg",
+    alt: "バンコクのネオンが輝くソイカウボーイ",
+  },
+  {
+    src: "/images/backpacker-road.jpg",
+    alt: "秋の道を歩くバックパッカー",
+  },
+];
+---
+
+<div class="swiper hero-swiper mt-6 mb-2 overflow-hidden rounded-xl">
+  <div class="swiper-wrapper">
+    {slides.map(slide => (
+      <div class="swiper-slide">
+        <img
+          src={slide.src}
+          alt={slide.alt}
+          class="h-64 w-full object-cover sm:h-80 md:h-96"
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+  <div class="swiper-pagination"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<script>
+  import Swiper from "swiper";
+  import { Navigation, Pagination, Autoplay } from "swiper/modules";
+  import "swiper/css";
+  import "swiper/css/navigation";
+  import "swiper/css/pagination";
+
+  document.addEventListener("astro:page-load", () => {
+    new Swiper(".hero-swiper", {
+      modules: [Navigation, Pagination, Autoplay],
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 800,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+</script>
+
+<style>
+  .hero-swiper .swiper-button-prev,
+  .hero-swiper .swiper-button-next {
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+  }
+
+  .hero-swiper .swiper-button-prev::after,
+  .hero-swiper .swiper-button-next::after {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .hero-swiper .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.6;
+  }
+
+  .hero-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+</style>

@@ -1,0 +1,126 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Socials from "@/components/Socials.astro";
+import Card from "@/components/Card.astro";
+import Pagination from "@/components/Pagination.astro";
+import getSortedPosts from "@/utils/getSortedPosts";
+import IconRss from "@/assets/icons/IconRss.svg";
+import HeroSlider from "@/components/HeroSlider.astro";
+import { SITE } from "@/config";
+import { SOCIALS } from "@/constants";
+
+export const getStaticPaths = (async ({ paginate }) => {
+  const posts = await getCollection("blog");
+  const sortedPosts = getSortedPosts(posts);
+  const recentPosts = sortedPosts.filter(({ data }) => !data.featured);
+  return paginate(recentPosts, { pageSize: SITE.postPerPage });
+}) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+
+const posts = await getCollection("blog");
+const sortedPosts = getSortedPosts(posts);
+const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
+
+const isFirstPage = page.currentPage === 1;
+---
+
+<Layout>
+  <Header />
+  <main id="main-content" data-layout="index" class="app-layout">
+
+    {isFirstPage && (
+      <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
+        <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+          人生一度きり。29歳で会社を辞めた。
+        </h1>
+        <a
+          target="_blank"
+          href="/rss.xml"
+          class="inline-block"
+          aria-label="rss feed"
+          title="RSS Feed"
+        >
+          <IconRss
+            width={20}
+            height={20}
+            class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+          />
+          <span class="sr-only">RSS Feed</span>
+        </a>
+
+        <p>
+          29歳のあの夏、会社を辞めて世界一人旅に飛び出した。
+          不安だらけのスタートだったが、行ってみたら世界は想像以上に面白かったのである。
+        </p>
+        <p class="mt-2">
+          このブログは、当時の旅日記を39歳の今、書き直しているものだ。
+          <strong>当時のリアルな体験談に、2026年の最新情報をかけ合わせている</strong>——
+          バックパックの選び方、持ち物リスト、現地で本当に使えたアプリまで、
+          「体験したからこそ伝えられること」と「今でも使える実用情報」を両方詰め込んだ。
+        </p>
+        <p class="mt-2">
+          これから一人旅に出る人の、背中を押せたら嬉しい。
+        </p>
+        {
+          SOCIALS.length > 0 && (
+            <div class="mt-4 flex max-sm:flex-col sm:items-center">
+              <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+              <Socials />
+            </div>
+          )
+        }
+        <HeroSlider />
+      </section>
+    )}
+
+    {
+      isFirstPage && featuredPosts.length > 0 && (
+        <section
+          id="featured"
+          class:list={[
+            "pt-12 pb-6",
+            "border-b border-border",
+          ]}
+        >
+          <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
+          <ul>
+            {featuredPosts.map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <section id="recent-posts" class="pt-12 pb-6">
+      <h2 class="text-2xl font-semibold tracking-wide">
+        {isFirstPage ? "Recent Posts" : `Posts（${page.currentPage} / ${page.lastPage}ページ）`}
+      </h2>
+      <ul>
+        {page.data.map(data => (
+          <Card variant="h3" {...data} />
+        ))}
+      </ul>
+    </section>
+
+  </main>
+
+  <Pagination {page} />
+
+  <Footer noMarginTop={page.lastPage > 1} />
+</Layout>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const indexLayout = (document.querySelector("#main-content") as HTMLElement)
+      ?.dataset?.layout;
+    if (indexLayout) {
+      sessionStorage.setItem("backUrl", "/");
+    }
+  });
+</script>
