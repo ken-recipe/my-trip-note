@@ -109,3 +109,17 @@ AmebaOwndからの記事をリライトして投稿。
    - Claude-in-Chrome でページを開きスクリーンショット確認
    - 画像・レイアウト・本文が正常に表示されているかチェック
    - 問題があれば即修正して再プッシュ
+
+## パッケージ管理ルール
+
+### pnpm-lock.yaml と package.json の同期（重要）
+
+**⚠️ package.json を編集・追加したら、必ず以下を実行してから commit すること：**
+
+1. `pnpm install` を実行して `pnpm-lock.yaml` を最新化する
+2. `git status` で `pnpm-lock.yaml` に変更がないか確認する
+3. package.json と pnpm-lock.yaml を一緒に commit・push する
+
+**理由：** Cloudflare Pages は pnpm で厳密にチェックするため、lockfile と package.json が不整合だとデプロイが失敗する（2026-05-15に発生）。詳細は memory/error_pnpm_lockfile.md 参照。
+
+**最も安全な方法：** 本プロジェクトの dependencies を更新する場合は、ローカルで pnpm を使用することで、常に lockfile が自動同期される。
