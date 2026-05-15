@@ -1,26 +1,25 @@
 ---
-const slides = [
-  {
-    src: "/images/backpacker-mountain.jpg",
-    alt: "バックパックを背負って山を眺める旅人",
-  },
-  {
-    src: "/images/backpacker-street.jpg",
-    alt: "カラフルな海外の街を歩くバックパッカー",
-  },
-  {
-    src: "/images/khaosan-road-night.jpg",
-    alt: "バンコク・カオサンロードの夜の賑わい",
-  },
-  {
-    src: "/images/bangkok-soi-cowboy-night.jpg",
-    alt: "バンコクのネオンが輝くソイカウボーイ",
-  },
-  {
-    src: "/images/backpacker-road.jpg",
-    alt: "秋の道を歩くバックパッカー",
-  },
-];
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("blog", ({ data }) => !data.draft);
+const imageRegex = /!\[([^\]]*)\]\(([^)]+)\)/g;
+
+const slides: { src: string; alt: string }[] = [];
+for (const post of posts) {
+  let match;
+  while ((match = imageRegex.exec(post.body ?? "")) !== null) {
+    const [, alt, src] = match;
+    if (src.startsWith("/images/")) {
+      slides.push({ src, alt: alt || post.data.title });
+    }
+  }
+}
+
+// シャッフルしてランダム順に表示
+for (let i = slides.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [slides[i], slides[j]] = [slides[j], slides[i]];
+}
 ---
 
 <div class="swiper hero-swiper mt-6 mb-2 overflow-hidden rounded-xl">
