@@ -30,7 +30,7 @@ const slides = [
         <img
           src={slide.src}
           alt={slide.alt}
-          class="h-64 w-full object-cover sm:h-80 md:h-96"
+          class="h-40 w-full object-cover rounded-lg sm:h-48 md:h-56"
           loading="lazy"
         />
       </div>
@@ -54,6 +54,13 @@ const slides = [
     new Swiper(".hero-swiper", {
       modules: [Navigation, Pagination, Autoplay],
       loop: true,
+      slidesPerView: 1.5,
+      spaceBetween: 12,
+      centeredSlides: true,
+      breakpoints: {
+        640: { slidesPerView: 2.5, spaceBetween: 16 },
+        768: { slidesPerView: 3, spaceBetween: 20 },
+      },
       autoplay: {
         delay: 4000,
         disableOnInteraction: false,
