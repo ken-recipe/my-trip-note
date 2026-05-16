@@ -1,0 +1,23 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<div class="my-6 flex justify-center">
+  <div
+    data-lyket-type="like"
+    data-lyket-id={id}
+    data-lyket-namespace="blog"
+    data-lyket-template="twitter"
+  >
+  </div>
+</div>
+
+<script
+  is:inline
+  data-astro-rerun
+  src="https://unpkg.com/@lyket/widget@latest/dist/lyket.js?apiKey=pt_ed2934da17e2b32b2857d6febe842a"
+></script>
