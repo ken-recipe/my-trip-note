@@ -21,4 +21,39 @@ title: "About"
 
 ## お問い合わせ
 
-記事へのご意見・ご感想はコメントにてお気軽にどうぞ。
+記事へのご意見・ご感想、その他ご質問がございましたら、下記のフォームよりお気軽にお問い合わせください。
+
+<form action="https://formspree.io/f/xvzvzlelao" method="POST" class="my-8 space-y-4">
+  <div class="space-y-2">
+    <label for="email" class="block font-semibold">メールアドレス <span class="text-red-600">*</span></label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      required 
+      class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent dark:border-gray-600 dark:bg-gray-800"
+      placeholder="your@example.com"
+    />
+  </div>
+  
+  <div class="space-y-2">
+    <label for="message" class="block font-semibold">メッセージ <span class="text-red-600">*</span></label>
+    <textarea 
+      id="message" 
+      name="message" 
+      required 
+      rows="6"
+      class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent dark:border-gray-600 dark:bg-gray-800"
+      placeholder="ご質問、ご感想などをご自由にお書きください。"
+    ></textarea>
+  </div>
+  
+  <div class="pt-2">
+    <button 
+      type="submit" 
+      class="rounded bg-accent px-6 py-2 text-white font-semibold hover:opacity-90 transition-opacity"
+    >
+      送信する
+    </button>
+  </div>
+</form>
