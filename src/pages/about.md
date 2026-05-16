@@ -23,7 +23,12 @@ title: "About"
 
 記事へのご意見・ご感想、その他ご質問がございましたら、下記のフォームよりお気軽にお問い合わせください。
 
-<form action="https://formspree.io/f/xvzvzlelao" method="POST" class="my-8 space-y-4">
+<div data-fs-success class="mb-4 rounded bg-green-100 p-4 text-green-700 hidden">
+  ✅ ご送信ありがとうございます！メールを確認させていただきます。
+</div>
+<div data-fs-error class="mb-4 rounded bg-red-100 p-4 text-red-700 hidden"></div>
+
+<form id="contact-form" class="my-8 space-y-4">
   <div class="space-y-2">
     <label for="email" class="block font-semibold">メールアドレス <span class="text-red-600">*</span></label>
     <input 
@@ -31,9 +36,11 @@ title: "About"
       id="email" 
       name="email" 
       required 
+      data-fs-field
       class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent dark:border-gray-600 dark:bg-gray-800"
       placeholder="your@example.com"
     />
+    <span data-fs-error="email" class="text-sm text-red-600"></span>
   </div>
   
   <div class="space-y-2">
@@ -42,18 +49,27 @@ title: "About"
       id="message" 
       name="message" 
       required 
+      data-fs-field
       rows="6"
       class="w-full rounded border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-accent dark:border-gray-600 dark:bg-gray-800"
       placeholder="ご質問、ご感想などをご自由にお書きください。"
     ></textarea>
+    <span data-fs-error="message" class="text-sm text-red-600"></span>
   </div>
   
   <div class="pt-2">
     <button 
       type="submit" 
-      class="rounded bg-accent px-6 py-2 text-white font-semibold hover:opacity-90 transition-opacity"
+      data-fs-submit-btn
+      class="rounded bg-accent px-6 py-2 text-white font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
     >
       送信する
     </button>
   </div>
 </form>
+
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#contact-form', formId: 'xvzlelao' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
