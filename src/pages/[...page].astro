@@ -27,6 +27,37 @@ const sortedPosts = getSortedPosts(posts);
 const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 
 const isFirstPage = page.currentPage === 1;
+
+const COUNTRY_TAG_MAP: Record<string, string> = {
+  "タイ": "🇹🇭",
+  "カンボジア": "🇰🇭",
+  "ベトナム": "🇻🇳",
+  "ミャンマー": "🇲🇲",
+  "ラオス": "🇱🇦",
+  "マレーシア": "🇲🇾",
+  "シンガポール": "🇸🇬",
+  "インドネシア": "🇮🇩",
+  "フィリピン": "🇵🇭",
+  "スペイン": "🇪🇸",
+  "フランス": "🇫🇷",
+  "イタリア": "🇮🇹",
+  "ドイツ": "🇩🇪",
+  "イギリス": "🇬🇧",
+  "チェコ": "🇨🇿",
+  "ハンガリー": "🇭🇺",
+  "セルビア": "🇷🇸",
+  "クロアチア": "🇭🇷",
+  "スロベニア": "🇸🇮",
+  "ボスニア・ヘルツェゴビナ": "🇧🇦",
+  "インド": "🇮🇳",
+  "日本": "🇯🇵",
+};
+
+const countryCounts = Object.keys(COUNTRY_TAG_MAP).reduce((acc, country) => {
+  const count = sortedPosts.filter(p => p.data.tags?.includes(country)).length;
+  if (count > 0) acc[country] = count;
+  return acc;
+}, {} as Record<string, number>);
 ---
 
 <Layout>
@@ -75,6 +106,24 @@ const isFirstPage = page.currentPage === 1;
           )
         }
         <HeroSlider />
+      </section>
+    )}
+
+    {isFirstPage && Object.keys(countryCounts).length > 0 && (
+      <section id="country-tags" class="pt-8 pb-6 border-b border-border">
+        <h2 class="text-2xl font-semibold tracking-wide mb-4">国別</h2>
+        <div class="flex flex-wrap gap-2">
+          {Object.entries(countryCounts).map(([country, count]) => (
+            <a
+              href={`/tags/${country}/`}
+              class="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-sm font-medium hover:bg-accent/10 hover:border-accent transition-colors"
+            >
+              <span>{COUNTRY_TAG_MAP[country]}</span>
+              <span>{country}</span>
+              <span class="text-xs text-muted-foreground">({count})</span>
+            </a>
+          ))}
+        </div>
       </section>
     )}
 
