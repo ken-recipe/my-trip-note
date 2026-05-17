@@ -7,7 +7,7 @@ featured: false
 draft: false
 ---
 
-![カオサンロードから徒歩3分の格安ゲストハウス。ここがカンボジア行きバスの拠点だった](/images/cambodia-guesthouse-exterior.jpg)
+![当時のゲストハウスの写真。カオサンロードから徒歩3分の格安ゲストハウス。ここがカンボジア行きバスの拠点だった](/images/cambodia-guesthouse-exterior.jpg)
 
 タイのバンコクからカンボジアへ移動するルートはいくつかある。バスで行く方法と飛行機。一般的には、モーチット駅から国際直通バスを利用して向かうのだが、金額は約750バーツかかった。
 
@@ -145,8 +145,8 @@ draft: false
 
 ---
 
-## 次に読む記事
+## 前の記事
 
-👉 [カオサンロードで一人旅の夜を過ごした話](/posts/khaosan-road-solo-night)
+👈 [バンコクで一人ゴーゴーバーに行ってみた｜ソイカウボーイ初体験と気をつけること](/posts/bangkok-soi-cowboy)
 
 つづく。

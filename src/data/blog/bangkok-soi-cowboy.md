@@ -127,10 +127,12 @@ draft: false
 
 ---
 
-## 次に読む記事
+## 前の記事
 
-👉 [バンコク到着初日の洗礼｜住所なしAirbnbとタクシーぼったくりと76バーツのメシ](/posts/bangkok-arrival-day1)
+👈 [カオサンロードに一人で乗り込んだ夜｜国籍を超えた一体感の話](/posts/khaosan-road-solo-night)
 
-👉 [バンコクでイサーン料理を食べた話｜地元民に愛されるRaan Praram 9 Kaiyangへ](/posts/bangkok-isaan-restaurant)
+## 次の記事
+
+👉 [バンコクからカンボジアへの格安移動｜300バーツで国境越え＆ビザ取得の全記録](/posts/bangkok-cambodia-overland-route)
 
 つづく。

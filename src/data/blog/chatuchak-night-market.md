@@ -137,10 +137,12 @@ draft: false
 
 ---
 
-## 次に読む記事
+## 前の記事
 
-👉 [カオサンロード一人夜遊び｜バックパッカーの聖地で感じた一人旅の醍醐味](/posts/khaosan-road-solo-night)
+👈 [バンコクでイサーン料理を食べた話｜地元民に愛されるRaan Praram 9 Kaiyangへ](/posts/bangkok-isaan-restaurant)
 
-👉 [バンコク到着初日の洗礼｜住所なしAirbnbとタクシーぼったくりと76バーツのメシ](/posts/bangkok-arrival-day1)
+## 次の記事
+
+👉 [カオサンロードに一人で乗り込んだ夜｜国籍を超えた一体感の話](/posts/khaosan-road-solo-night)
 
 つづく。

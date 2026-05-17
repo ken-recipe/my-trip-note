@@ -100,6 +100,8 @@ draft: false
 
 ![カタカナ！マジで親切。おすすめ料理の写真もでっかく載っていた](/images/bangkok-raan-praram9-katakana-menu.jpg)
 
+![メニューのガイヤーン（Grilled chicken）のページ。カタカナ・英語・中国語で表記されていた](/images/bangkok-gai-yang-menu.jpg)
+
 カタカナ！！！ってマジで親切。しかもおすすめの料理の写真はでっかくなっているから、とりあえず何を頼んでいいかわからない人は大きい写真で指差して「これ」というと、店員さんがやさしく代わりに記入してくれる。（笑顔が素敵な女性でした）
 
 ---
@@ -108,7 +110,7 @@ draft: false
 
 ### ガイヤーン（ไก่ย่าง）/ 120バーツ（当時）
 
-![この店の一番のおすすめ品、ガイヤーン](/images/bangkok-gai-yang.jpg)
+![この店の一番のおすすめ品、ガイヤーン](/images/bangkok-gai-yang-v2.jpg)
 
 これがこの店の一番のおすすめ品。全てのお客が頼んでいると思われる。 甘辛く間違い無し！
 
@@ -118,13 +120,13 @@ draft: false
 
 ### クン ヤーン ソース（กุ้งสดย่างซอส）/ 80バーツ（当時）
 
-![クン ヤーン ソース。シンプルな塩味だが美味しかった](/images/bangkok-khun-yang.jpg)
+![クン ヤーン ソース。シンプルな塩味だが美味しかった](/images/bangkok-khun-yang-v2.jpg)
 
 シンプルに塩味だけど美味しかった。 殻を剥くのが面倒で手が汚れた。
 
 ### ソムタム
 
-![ソムタム。辛いの苦手な人は注意！](/images/bangkok-somtam.jpg)
+![ソムタム。辛いの苦手な人は注意！](/images/bangkok-somtam-v2.jpg)
 
 これは、辛いの苦手な人はいかない方がいい！
 
@@ -132,7 +134,7 @@ draft: false
 
 ### カーオニャオ（もち米）
 
-![カーオニャオ。店員さんに勧められた一品](/images/bangkok-khao-niao.jpg)
+![カーオニャオ。店員さんに勧められた一品](/images/bangkok-khao-niao-v2.jpg)
 
 店員さんに進められたのでいただいた。いくらだろう？
 
@@ -154,10 +156,12 @@ draft: false
 
 ---
 
-## 次に読む記事
+## 前の記事
 
-👉 [バンコク到着初日の洗礼｜住所なしAirbnbとタクシーぼったくりと76バーツのメシ](/posts/bangkok-arrival-day1)
+👈 [バンコク到着初日の洗礼｜住所なしAirbnbとタクシーぼったくりと76バーツのメシ](/posts/bangkok-arrival-day1)
 
-👉 [初海外で飛行機に乗り遅れた話｜出発前夜の行動が引き起こした大ハプニング](/posts/missed-flight-bangkok)
+## 次の記事
+
+👉 [チャトゥチャック市場と水上マーケットを巡った話](/posts/chatuchak-night-market)
 
 つづく。
