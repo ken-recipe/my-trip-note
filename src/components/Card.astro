@@ -10,7 +10,17 @@ type Props = {
 
 const { variant: Heading = "h2", id, data, filePath } = Astro.props;
 
-const { title, description, ...props } = data;
+const { title, description, tags, ...props } = data;
+
+const COUNTRY_TAGS = [
+  "タイ", "カンボジア", "ベトナム", "ミャンマー", "ラオス",
+  "マレーシア", "シンガポール", "インドネシア", "フィリピン",
+  "スペイン", "フランス", "イタリア", "ドイツ", "イギリス",
+  "チェコ", "ハンガリー", "セルビア", "クロアチア", "スロベニア",
+  "ボスニア・ヘルツェゴビナ", "インド", "日本",
+];
+
+const countryTags = (tags ?? []).filter(tag => COUNTRY_TAGS.includes(tag));
 ---
 
 <li class="my-6">
@@ -29,5 +39,17 @@ const { title, description, ...props } = data;
     </Heading>
   </a>
   <Datetime {...props} />
+  {countryTags.length > 0 && (
+    <div class="mt-1 flex flex-wrap gap-1">
+      {countryTags.map(tag => (
+        <a
+          href={`/tags/${slugifyStr(tag)}/`}
+          class="rounded-full bg-accent/10 px-2 py-0.5 text-xs font-medium text-accent hover:bg-accent/20"
+        >
+          {tag}
+        </a>
+      ))}
+    </div>
+  )}
   <p>{description}</p>
 </li>
