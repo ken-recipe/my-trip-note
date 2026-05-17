@@ -149,4 +149,8 @@ draft: false
 
 👈 [バンコクで一人ゴーゴーバーに行ってみた｜ソイカウボーイ初体験と気をつけること](/posts/bangkok-soi-cowboy)
 
+## 次の記事
+
+👉 [天空の城ラピュタのモデル「ベンメリア」へ｜カンボジア遺跡巡りの記録](/posts/beng-mealea-cambodia)
+
 つづく。
