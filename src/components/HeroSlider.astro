@@ -15,16 +15,18 @@ for (const post of posts) {
   }
 }
 
-// シャッフルしてランダム順に表示
+// シャッフルしてランダム順に表示（最大15枚に制限）
 for (let i = slides.length - 1; i > 0; i--) {
   const j = Math.floor(Math.random() * (i + 1));
   [slides[i], slides[j]] = [slides[j], slides[i]];
 }
+const maxSlides = 15;
+const displaySlides = slides.slice(0, maxSlides);
 ---
 
 <div class="swiper hero-swiper mt-6 mb-2 overflow-hidden rounded-xl">
   <div class="swiper-wrapper">
-    {slides.map(slide => (
+    {displaySlides.map(slide => (
       <div class="swiper-slide">
         <img
           src={slide.src}
