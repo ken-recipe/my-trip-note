@@ -133,4 +133,6 @@ draft: false
 
 ## 次に読む記事
 
+👉 [ベトナムのぼったくり体験談｜日本人はなめられている？](/posts/vietnam-scam-warning/)
+
 つづく。
