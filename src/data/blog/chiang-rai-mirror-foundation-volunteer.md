@@ -151,6 +151,10 @@ draft: false
 
 ---
 
+## 次に読む記事
+
+👉 [タイの山岳民族の家に泊まった話｜ラフ族・アカ族の村でホームステイした5日間](/posts/chiang-rai-hilltribe-homestay)
+
 ## 前の記事
 
 👈 [ヴィエンチャンからチェンマイへ｜国境を越えて実感したタイの圧倒的なクオリティ](/posts/vientiane-to-chiang-mai-bus)
