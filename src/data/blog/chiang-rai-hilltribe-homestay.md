@@ -134,6 +134,10 @@ draft: false
 
 ---
 
+## 次に読む記事
+
+👉 [バスが炎上！？しそうになった話｜チェンライからバンコクへの夜行バス・トラブル体験記](/posts/chiang-rai-to-bangkok-bus-trouble)
+
 ## 前の記事
 
 👈 [NGOミラー財団でボランティア｜チェンライの山岳民族の村で過ごした5日間](/posts/chiang-rai-mirror-foundation-volunteer)
