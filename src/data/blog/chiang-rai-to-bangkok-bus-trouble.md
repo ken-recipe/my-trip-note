@@ -79,6 +79,10 @@ draft: false
 
 ---
 
+## 次に読む記事
+
+👉 [ソンクラーンに行ってみた！｜タイの水掛け祭りを3都市で楽しんだ体験記](/posts/thailand-songkran-water-festival)
+
 ## 前の記事
 
 👈 [タイの山岳民族の家に泊まった話｜ラフ族・アカ族の村でホームステイした5日間](/posts/chiang-rai-hilltribe-homestay)
