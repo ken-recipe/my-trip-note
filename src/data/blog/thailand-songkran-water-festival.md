@@ -96,6 +96,10 @@ draft: false
 
 ---
 
+## 次に読む記事
+
+👉 [バンコクからクアラルンプールへ！｜LCCで4,000円台・空港アクセス完全ガイド](/posts/bangkok-to-kuala-lumpur-flight)
+
 ## 前の記事
 
 👈 [バスが炎上！？しそうになった話｜チェンライからバンコクへの夜行バス・トラブル体験記](/posts/chiang-rai-to-bangkok-bus-trouble)
