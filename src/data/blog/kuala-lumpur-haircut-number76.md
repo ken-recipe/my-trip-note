@@ -29,9 +29,14 @@ draft: false
 
 しかも入り口には警備員が立っている。バックパッカー丸出しの、よれよれの格好をした自分のような人間は、入り口で静止されるのではないか――正直、かなりハラハラしたのを覚えている。笑
 
-![日本人経営の美容室の店内（イメージ）](/images/hair-salon-interior.jpg)
-
 なんとか止められることもなく、無事にスターヒル店にたどり着いた。
+
+<div style="display:flex; gap:8px; flex-wrap:wrap; margin:1rem 0;">
+  <img src="/images/kl-number76-entrance.jpg" alt="当時のスターヒルギャラリア入り口（2016年撮影）" style="flex:1; min-width:240px; width:100%; border-radius:8px;" />
+  <img src="/images/kl-number76-salon.jpg" alt="当時のNumber76スターヒル店の外観（2016年撮影）" style="flex:1; min-width:240px; width:100%; border-radius:8px;" />
+</div>
+
+*▲ いずれも当時（2016年）に撮影した実際の写真。左がハイブランドの並ぶモールの入り口、右がNumber76の店舗。*
 
 ## 気になるお値段は？
 
