@@ -1,7 +1,7 @@
 ---
 title: "海外一人旅の情報収集のやり方｜ネット情報に振り回された29歳の話"
 description: "初海外バックパック旅の前にネット情報の海で溺れかけた記録。ブログ・YouTube・SNSの情報の取捨選択、Facebookで経験者と繋がって人脈を広げた方法を紹介。"
-pubDatetime: 2025-05-12T00:00:00Z
+pubDatetime: 2026-05-12T00:00:00Z
 tags: ["日本", "準備", "一人旅", "情報収集", "バックパック", "海外旅行"]
 featured: false
 draft: false
