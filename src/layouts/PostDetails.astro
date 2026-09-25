@@ -7,7 +7,6 @@ import Tag from "@/components/Tag.astro";
 import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
-import LikeButton from "@/components/LikeButton.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import { getPath } from "@/utils/getPath";
@@ -116,8 +115,6 @@ const nextPost =
     </article>
 
     <hr class="my-8 border-dashed" />
-
-    <LikeButton id={post.id} />
 
     <EditPost class="sm:hidden" {hideEditPost} {post} />
 
