@@ -12,3 +12,9 @@
 !.prettierrc
 !eslint.config.js
 !README.md
+# 記事は人が書く文章。*斜体* などの書き方は作業ルールで決めているので整形しない
+/src/data/blog/
+# GA4の計測コードを書式ツールが読み取れないため除外（計測コードは書き換えない）
+/src/layouts/Layout.astro
+# サイト内検索用に自動生成されるファイル
+/public/pagefind/
