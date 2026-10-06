@@ -29,112 +29,118 @@ const featuredPosts = sortedPosts.filter(({ data }) => data.featured);
 const isFirstPage = page.currentPage === 1;
 
 const COUNTRY_TAG_MAP: Record<string, string> = {
-  "タイ": "🇹🇭",
-  "カンボジア": "🇰🇭",
-  "ベトナム": "🇻🇳",
-  "ミャンマー": "🇲🇲",
-  "ラオス": "🇱🇦",
-  "マレーシア": "🇲🇾",
-  "シンガポール": "🇸🇬",
-  "インドネシア": "🇮🇩",
-  "フィリピン": "🇵🇭",
-  "スペイン": "🇪🇸",
-  "フランス": "🇫🇷",
-  "イタリア": "🇮🇹",
-  "ドイツ": "🇩🇪",
-  "イギリス": "🇬🇧",
-  "チェコ": "🇨🇿",
-  "ハンガリー": "🇭🇺",
-  "セルビア": "🇷🇸",
-  "クロアチア": "🇭🇷",
-  "スロベニア": "🇸🇮",
+  タイ: "🇹🇭",
+  カンボジア: "🇰🇭",
+  ベトナム: "🇻🇳",
+  ミャンマー: "🇲🇲",
+  ラオス: "🇱🇦",
+  マレーシア: "🇲🇾",
+  シンガポール: "🇸🇬",
+  インドネシア: "🇮🇩",
+  フィリピン: "🇵🇭",
+  スペイン: "🇪🇸",
+  フランス: "🇫🇷",
+  イタリア: "🇮🇹",
+  ドイツ: "🇩🇪",
+  イギリス: "🇬🇧",
+  チェコ: "🇨🇿",
+  ハンガリー: "🇭🇺",
+  セルビア: "🇷🇸",
+  クロアチア: "🇭🇷",
+  スロベニア: "🇸🇮",
   "ボスニア・ヘルツェゴビナ": "🇧🇦",
-  "インド": "🇮🇳",
-  "日本": "🇯🇵",
+  インド: "🇮🇳",
+  日本: "🇯🇵",
 };
 
-const countryCounts = Object.keys(COUNTRY_TAG_MAP).reduce((acc, country) => {
-  const count = sortedPosts.filter(p => p.data.tags?.includes(country)).length;
-  if (count > 0) acc[country] = count;
-  return acc;
-}, {} as Record<string, number>);
+const countryCounts = Object.keys(COUNTRY_TAG_MAP).reduce(
+  (acc, country) => {
+    const count = sortedPosts.filter(p =>
+      p.data.tags?.includes(country)
+    ).length;
+    if (count > 0) acc[country] = count;
+    return acc;
+  },
+  {} as Record<string, number>
+);
 ---
 
 <Layout>
   <Header />
   <main id="main-content" data-layout="index" class="app-layout">
+    {
+      isFirstPage && (
+        <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
+          <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
+            人生一度きり。29歳で会社を辞めた。
+          </h1>
+          <a
+            target="_blank"
+            href="/rss.xml"
+            class="inline-block"
+            aria-label="rss feed"
+            title="RSS Feed"
+          >
+            <IconRss
+              width={20}
+              height={20}
+              class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
+            />
+            <span class="sr-only">RSS Feed</span>
+          </a>
 
-    {isFirstPage && (
-      <section id="hero" class:list={["pt-8 pb-6", "border-b border-border"]}>
-        <h1 class="my-4 inline-block text-4xl font-bold sm:my-8 sm:text-5xl">
-          人生一度きり。29歳で会社を辞めた。
-        </h1>
-        <a
-          target="_blank"
-          href="/rss.xml"
-          class="inline-block"
-          aria-label="rss feed"
-          title="RSS Feed"
-        >
-          <IconRss
-            width={20}
-            height={20}
-            class="scale-125 stroke-accent stroke-3 rtl:-rotate-90"
-          />
-          <span class="sr-only">RSS Feed</span>
-        </a>
-
-        <p>
-          29歳のあの夏、会社を辞めて世界一人旅に飛び出した。
-          不安だらけのスタートだったが、行ってみたら世界は想像以上に面白かったのである。
-        </p>
-        <p class="mt-2">
-          このブログは、当時の旅日記を39歳の今、書き直しているものだ。
-          <strong>当時のリアルな体験談に、2026年の最新情報をかけ合わせている</strong>——
-          バックパックの選び方、持ち物リスト、現地で本当に使えたアプリまで、
-          「体験したからこそ伝えられること」と「今でも使える実用情報」を両方詰め込んだ。
-        </p>
-        <p class="mt-2">
-          これから一人旅に出る人の、背中を押せたら嬉しい。
-        </p>
-        {
-          SOCIALS.length > 0 && (
+          <p>
+            29歳のあの夏、会社を辞めて世界一人旅に飛び出した。
+            不安だらけのスタートだったが、行ってみたら世界は想像以上に面白かったのである。
+          </p>
+          <p class="mt-2">
+            このブログは、当時の旅日記を39歳の今、書き直しているものだ。
+            <strong>
+              当時のリアルな体験談に、2026年の最新情報をかけ合わせている
+            </strong>
+            ——
+            バックパックの選び方、持ち物リスト、現地で本当に使えたアプリまで、
+            「体験したからこそ伝えられること」と「今でも使える実用情報」を両方詰め込んだ。
+          </p>
+          <p class="mt-2">これから一人旅に出る人の、背中を押せたら嬉しい。</p>
+          {SOCIALS.length > 0 && (
             <div class="mt-4 flex max-sm:flex-col sm:items-center">
-              <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">Social Links:</div>
+              <div class="me-2 mb-1 whitespace-nowrap sm:mb-0">
+                Social Links:
+              </div>
               <Socials />
             </div>
-          )
-        }
-        <HeroSlider />
-      </section>
-    )}
+          )}
+          <HeroSlider />
+        </section>
+      )
+    }
 
-    {isFirstPage && Object.keys(countryCounts).length > 0 && (
-      <section id="country-tags" class="pt-8 pb-6 border-b border-border">
-        <h2 class="text-2xl font-semibold tracking-wide mb-4">国別</h2>
-        <div class="flex flex-wrap gap-2">
-          {Object.entries(countryCounts).map(([country, count]) => (
-            <a
-              href={`/tags/${country}/`}
-              class="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-sm font-medium hover:bg-accent/10 hover:border-accent transition-colors"
-            >
-              <span>{COUNTRY_TAG_MAP[country]}</span>
-              <span>{country}</span>
-              <span class="text-xs text-muted-foreground">({count})</span>
-            </a>
-          ))}
-        </div>
-      </section>
-    )}
+    {
+      isFirstPage && Object.keys(countryCounts).length > 0 && (
+        <section id="country-tags" class="border-b border-border pt-8 pb-6">
+          <h2 class="mb-4 text-2xl font-semibold tracking-wide">国別</h2>
+          <div class="flex flex-wrap gap-2">
+            {Object.entries(countryCounts).map(([country, count]) => (
+              <a
+                href={`/tags/${country}/`}
+                class="flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:border-accent hover:bg-accent/10"
+              >
+                <span>{COUNTRY_TAG_MAP[country]}</span>
+                <span>{country}</span>
+                <span class="text-muted-foreground text-xs">({count})</span>
+              </a>
+            ))}
+          </div>
+        </section>
+      )
+    }
 
     {
       isFirstPage && featuredPosts.length > 0 && (
         <section
           id="featured"
-          class:list={[
-            "pt-12 pb-6",
-            "border-b border-border",
-          ]}
+          class:list={["pt-12 pb-6", "border-b border-border"]}
         >
           <h2 class="text-2xl font-semibold tracking-wide">Featured</h2>
           <ul>
@@ -148,15 +154,16 @@ const countryCounts = Object.keys(COUNTRY_TAG_MAP).reduce((acc, country) => {
 
     <section id="recent-posts" class="pt-12 pb-6">
       <h2 class="text-2xl font-semibold tracking-wide">
-        {isFirstPage ? "Recent Posts" : `Posts（${page.currentPage} / ${page.lastPage}ページ）`}
+        {
+          isFirstPage
+            ? "Recent Posts"
+            : `Posts（${page.currentPage} / ${page.lastPage}ページ）`
+        }
       </h2>
       <ul>
-        {page.data.map(data => (
-          <Card variant="h3" {...data} />
-        ))}
+        {page.data.map(data => <Card variant="h3" {...data} />)}
       </ul>
     </section>
-
   </main>
 
   <Pagination {page} />
