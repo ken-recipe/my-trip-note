@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import Card from "@/components/Card.astro";
+import relatedPostsMap from "@/data/related-posts.json";
+
+type Props = {
+  post: CollectionEntry<"blog">;
+  posts: CollectionEntry<"blog">[];
+};
+
+const { post, posts } = Astro.props;
+
+const relatedIds: string[] =
+  (relatedPostsMap as Record<string, string[]>)[post.id] ?? [];
+
+// 下書きや、削除した記事は表示しない
+const relatedPosts = relatedIds
+  .map(id => posts.find(p => p.id === id))
+  .filter(
+    (p): p is CollectionEntry<"blog"> => p !== undefined && !p.data.draft
+  );
+---
+
+{
+  relatedPosts.length > 0 && (
+    <section data-pagefind-ignore class="my-8">
+      <h2 class="text-xl font-semibold text-accent">関連記事</h2>
+      <ul>
+        {relatedPosts.map(p => (
+          <Card variant="h3" {...p} />
+        ))}
+      </ul>
+    </section>
+  )
+}

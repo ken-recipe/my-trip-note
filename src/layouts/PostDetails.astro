@@ -8,6 +8,7 @@ import Datetime from "@/components/Datetime.astro";
 import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
+import RelatedPosts from "@/components/RelatedPosts.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
@@ -125,6 +126,8 @@ const nextPost =
     <BackToTopButton />
 
     <ShareLinks />
+
+    <RelatedPosts {post} {posts} />
 
     <hr class="my-6 border-dashed" />
 
